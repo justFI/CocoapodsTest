@@ -1,0 +1,16 @@
+# AI services not fully covered by upstream lists
+host-suffix, perplexity.ai, AI 服务
+host-suffix, x.ai, AI 服务
+host-suffix, grok.com, AI 服务
+host-suffix, cursor.com, AI 服务
+host-suffix, cursor.sh, AI 服务
+host-suffix, codeium.com, AI 服务
+host-suffix, windsurf.com, AI 服务
+host-suffix, huggingface.co, AI 服务
+host-suffix, hf.co, AI 服务
+host-suffix, replicate.com, AI 服务
+host-suffix, deepseek.com, AI 服务
+host-suffix, qwen.ai, AI 服务
+host-suffix, moonshot.cn, AI 服务
+host-suffix, kimi.com, AI 服务
+host-suffix, dashscope.aliyuncs.com, AI 服务
