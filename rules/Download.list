@@ -1,0 +1,11 @@
+# Large downloads: default policy is Freedom s801, with manual fallbacks
+host-suffix, release-assets.githubusercontent.com, 下载服务
+host-suffix, objects.githubusercontent.com, 下载服务
+host-suffix, pkg-containers.githubusercontent.com, 下载服务
+host-suffix, ghcr.io, 下载服务
+host-suffix, production.cloudflare.docker.com, 下载服务
+host, download.developer.apple.com, 下载服务
+host-suffix, swcdn.apple.com, 下载服务
+host-suffix, appldnld.apple.com, 下载服务
+host-suffix, steamcontent.com, 下载服务
+host-suffix, steamserver.net, 下载服务
