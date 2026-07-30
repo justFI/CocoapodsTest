@@ -1,7 +1,7 @@
 /** Quantumult X running mode status/switcher. */
 
 function parseMode() {
-  const source = String(($environment && $environment.sourcePath) || "");
+  const source = String((typeof $environment !== "undefined" && $environment.sourcePath) || "");
   const match = source.match(/[#&]mode=([^&]+)/);
   return match ? decodeURIComponent(match[1]) : "status";
 }
@@ -27,7 +27,7 @@ const requested = parseMode();
 
 if (requested === "status") {
   sendConfiguration({ action: "get_running_mode" }).then(function (ret) {
-    const mode = ret.running_mode || ret.mode || JSON.stringify(ret);
+    const mode = typeof ret === "string" ? ret : (ret.running_mode || ret.mode || JSON.stringify(ret));
     const names = { filter: "分流模式", all_proxy: "全局代理", all_direct: "全局直连" };
     $done({ title: "当前运行模式", message: (names[mode] || mode) + "\n\n推荐长期保持“分流模式”。全局代理仅适合临时排错或需要所有流量统一出境的场景。" });
   }).catch(function (error) {
