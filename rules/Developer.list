@@ -1,0 +1,24 @@
+# Developer platforms and package registries
+host-suffix, docker.com, 开发服务
+host-suffix, docker.io, 开发服务
+host-suffix, dockerhub.com, 开发服务
+host-suffix, npmjs.com, 开发服务
+host-suffix, npmjs.org, 开发服务
+host-suffix, pypi.org, 开发服务
+host-suffix, pythonhosted.org, 开发服务
+host-suffix, rubygems.org, 开发服务
+host-suffix, cocoapods.org, 开发服务
+host-suffix, swift.org, 开发服务
+host-suffix, swiftpackageindex.com, 开发服务
+host-suffix, brew.sh, 开发服务
+host-suffix, homebrew.github.io, 开发服务
+host-suffix, jetbrains.com, 开发服务
+host-suffix, firebase.google.com, 开发服务
+host-suffix, firebaseio.com, 开发服务
+host-suffix, firebaseapp.com, 开发服务
+host-suffix, supabase.com, 开发服务
+host-suffix, supabase.co, 开发服务
+host-suffix, vercel.com, 开发服务
+host-suffix, vercel.app, 开发服务
+host-suffix, workers.dev, 开发服务
+host-suffix, pages.dev, 开发服务
