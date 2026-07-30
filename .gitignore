@@ -1,0 +1,9 @@
+# Private Quantumult X configs
+config/*.private.conf
+config/private.conf
+*.p12
+*.mobileconfig
+secrets.*
+.env
+.env.*
+.DS_Store
