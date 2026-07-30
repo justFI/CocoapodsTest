@@ -79,9 +79,10 @@ Promise.all([
     byNode[name].tx += tx;
   });
 
-  const ranking = Object.keys(byNode).map(function (name) {
+  const allNodeTraffic = Object.keys(byNode).map(function (name) {
     return { name: name, rx: byNode[name].rx, tx: byNode[name].tx, total: byNode[name].rx + byNode[name].tx };
-  }).sort(function (a, b) { return b.total - a.total; }).slice(0, 8);
+  }).sort(function (a, b) { return b.total - a.total; });
+  const ranking = allNodeTraffic.slice(0, 8);
 
   const policyRows = WATCH_POLICIES.map(function (policy) {
     const chain = states[policy];
@@ -93,7 +94,7 @@ Promise.all([
     return "<tr><td>" + (index + 1) + "</td><td>" + escapeHtml(shortNode(item.name)) + "</td><td>" + bytes(item.rx) + "</td><td>" + bytes(item.tx) + "</td><td><b>" + bytes(item.total) + "</b></td></tr>";
   }).join("") : "<tr><td colspan=\"5\">当前统计周期还没有节点流量记录</td></tr>";
 
-  const s801 = ranking.filter(function (item) { return /c12s801/i.test(item.name); })[0];
+  const s801 = allNodeTraffic.filter(function (item) { return /c12s801/i.test(item.name); })[0];
   const s801Text = s801 ? bytes(s801.total) : "0 B";
 
   const html = `
