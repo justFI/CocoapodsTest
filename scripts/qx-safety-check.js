@@ -39,7 +39,7 @@ Promise.all([
 ]).then(function (data) {
   const modeRet = data[0] || {};
   const states = data[1] || {};
-  const mode = modeRet.running_mode || modeRet.mode || String(modeRet || "unknown");
+  const mode = typeof modeRet === "string" ? modeRet : (modeRet.running_mode || modeRet.mode || "unknown");
   const warnings = [];
   const rows = [];
 
