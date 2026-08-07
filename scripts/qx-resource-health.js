@@ -2,8 +2,12 @@
 
 const RESOURCES = [
   ["资源解析器", "https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js"],
-  ["AdvertisingLite 规则", "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AdvertisingLite/AdvertisingLite.list"],
+  ["AWAvenue 广告规则", "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list"],
+  ["Advertising 完整规则", "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"],
+  ["Privacy 规则", "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Privacy/Privacy.list"],
+  ["Hijacking 规则", "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hijacking/Hijacking.list"],
   ["AdvertisingLite 重写", "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/AdvertisingLite/AdvertisingLite.conf"],
+  ["墨鱼去开屏 2.0", "https://ddgksf2013.top/rewrite/StartUpAds.conf"],
   ["AI 自维护规则", "https://raw.githubusercontent.com/justFI/CocoapodsTest/master/rules/AI.list"],
   ["开发自维护规则", "https://raw.githubusercontent.com/justFI/CocoapodsTest/master/rules/Developer.list"],
   ["下载自维护规则", "https://raw.githubusercontent.com/justFI/CocoapodsTest/master/rules/Download.list"],
@@ -14,7 +18,8 @@ const RESOURCES = [
   ["Gemini 规则", "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Gemini/Gemini.list"],
   ["GitHub 规则", "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GitHub/GitHub.list"],
   ["Apple 规则", "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list"],
-  ["工具脚本", "https://raw.githubusercontent.com/justFI/CocoapodsTest/master/scripts/qx-dev-toolbox.js"]
+  ["工具脚本", "https://raw.githubusercontent.com/justFI/CocoapodsTest/master/scripts/qx-dev-toolbox.js"],
+  ["广告开关脚本", "https://raw.githubusercontent.com/justFI/CocoapodsTest/master/scripts/qx-adblock-mode.js"]
 ];
 
 function escapeHtml(value) {
@@ -31,7 +36,7 @@ function check(item) {
     url: item[1],
     method: "GET",
     timeout: 7000,
-    headers: { Range: "bytes=0-32", "User-Agent": "QuantumultX-Pro-Resource-Check/1.5" },
+    headers: { Range: "bytes=0-32", "User-Agent": "QuantumultX-Pro-Resource-Check/1.8" },
     opts: { policy: "开发服务-推荐s4", redirection: true }
   }).then(function (response) {
     const status = Number(response.statusCode || 0);
